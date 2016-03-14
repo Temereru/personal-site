@@ -1,8 +1,41 @@
-h1 {
-	color: green;
-	font: fantasy;
+body {
+	background-image:url("photos/background.jpg");
 }
 
-p {
-	color: lime;
+nav li {
+	display: inline;
+	background-color: #106022;
+	border-radius: 10px;
+	padding: 4px;
+}
+
+nav {
+	background-color: #80C18E;
+	width: 100%;
+	position: fixed;
+	top: 0;
+}
+
+nav ul {
+	margin: 0;
+	text-align: center;
+}
+
+nav li a {
+	text-decoration: none;
+	font-family: 'Indie Flower';
+	color: #80C18E;
+	line-height: 50px;
+}
+
+#About {
+	margin-top: 5%;
+	margin-left: 25%;
+	display: inline-block;
+	background-color: #50A162;
+	opacity: 0.8;
+	border: 10px solid #00400E;
+	border-radius: 20px;
+	padding: 4px;
+	text-align: center;
 }
