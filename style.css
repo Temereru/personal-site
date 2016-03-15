@@ -39,3 +39,20 @@ nav li a {
 	padding: 4px;
 	text-align: center;
 }
+
+.row {
+	width: 100%;
+	margin: 0 auto;
+}
+.column {
+	float: left;
+	width:33.3%;
+}
+
+.column-inner {
+	padding: 20px;
+}
+.column-inner img {
+	width: 100%;
+	height: 100%;
+}
