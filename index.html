@@ -2,45 +2,57 @@
 <html>
 <head>
 	<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="node_modules/handlebars/dist/handlebars.min.js"></script>
 	<title>Tomer David</title>
 </head>
 <body>
-	<nav>
-		<ul>
-			<li><a href="#About">About</a></li>
-			<li><a href="#Projects">Projects</a></li>
-			<li><a href="#ContactMe">Contact Me</a></li>
-		</ul>		
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<ul class="nav navbar-nav">
+				<li><a href="#About">About</a></li>
+				<li><a href="#Projects">Projects</a></li>
+				<li><a href="#ContactMe">Contact Me</a></li>
+			</ul>	
+		</div>	
 	</nav>
-	<section id="About">
-		<div id="AboutDiv">
+	<section id="About" class="row">
+		<div id="AboutDiv" class="container text-center">
 			<h1 class="AboutContent">About Myself</h1>
 			<p class="AboutContent">My name is Tomer david, I'm 23 years old, and I'm currently studying to become a ninja web developer ^~^ </p>
 			<p class="AboutContent">I was a radio device handler in the army, and I'm a dancer</p>
 		</div>
 	</section>
-	<section id="Projects">
-		<div>
-		<div class="row">
-			<div class="column">
-				<div class="column-inner"><a href="https://github.com/Temereru/Secret-Tel-Aviv"><img src="photos/projectPlaceHolder.jpg"/></a></div>
-			</div>
-			<div class="column">
-				<div class="column-inner"><a href="https://github.com/Temereru/Secret-Tel-Aviv"><img src="photos/projectPlaceHolder.jpg"/></a></div>
-			</div>
-			<div class="column">
-				<div class="column-inner"><a href="https://github.com/Temereru/Secret-Tel-Aviv"><img src="photos/projectPlaceHolder.jpg"/></a></div>
-			</div>
-			</div>
+	<section id="Projects" class="row">
+		
 	</section>
-	<section id="ContactMe">
-		<div id="ContactDiv">
+	<section id="ContactMe" class="row">
+		<div id="ContactDiv" class="container text-center">
 			<h1 class="ContactContent">Contact Me</h1>
 			<p class="ContactContent"><b>Phone Number:</b> 054-4312106</p>
 			<div class="divider"></div>
 			<p class="ContactContent"><b>email:</b> younrg@gmail.com</p>
 		</div>
 	</section>
+
+
+	<script id="project-card" type="text/x-handlebars-template">
+	{{#each repos}}
+    <div class="col-md-4">
+      <div class="card-container">
+        <div class="card item">
+          <div class="card-inner">
+            <a href="{{url}}"><h2>{{name}}</h2><img src="photos/projectPlaceHolder.jpg" class="proimage"></a>
+          </div>
+        </div><!-- card-item -->
+      </div><!-- card-container -->
+    </div><!-- col-md-4 -->
+  </div>
+  {{/each}}
+  </script>
+  <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
